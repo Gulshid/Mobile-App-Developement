@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="colorPrimary">#6C63FF</color>
+    <color name="colorPrimaryDark">#4B44CC</color>
+    <color name="colorAccent">#FF6584</color>
+
+    <!-- Background layers -->
+    <color name="bgMain">#0F0F17</color>
+    <color name="bgCard">#1A1A2E</color>
+    <color name="bgSurface">#16213E</color>
+    <color name="bgElevated">#1F2040</color>
+
+    <!-- Bottom nav -->
+    <color name="navBackground">#13131F</color>
+    <color name="navSelected">#6C63FF</color>
+    <color name="navUnselected">#4A4A6A</color>
+    <color name="navIndicator">#2A2550</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#FFFFFF</color>
+    <color name="textSecondary">#A0A0C0</color>
+    <color name="textMuted">#5A5A7A</color>
+
+    <!-- Accents -->
+    <color name="accentGreen">#00D4AA</color>
+    <color name="accentOrange">#FF8C42</color>
+    <color name="accentPink">#FF6584</color>
+    <color name="accentPurple">#6C63FF</color>
+
+    <!-- White overlays -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

@@ -1,0 +1,37 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="#3e7d02"
+        android:padding="10dp"
+        android:text="Click Explicit → Go to second activity. Click Implicit → Open website"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/explicit_Intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Explicit Intent Example" />
+
+    <Button
+        android:id="@+id/implicit_Intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/explicit_Intent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Implicit Intent Example" />
+
+</RelativeLayout>

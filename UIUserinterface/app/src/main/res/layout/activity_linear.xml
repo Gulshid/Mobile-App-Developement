@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout: arranges views in a single row OR column -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- ─── Header ─── -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout Example"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#6C63FF"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ─── Horizontal row of 3 equal-width buttons (layout_weight) ─── -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horizontal — layout_weight"
+        android:textSize="13sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A"
+            android:backgroundTint="#BBDEFB"
+            android:textColor="#1565C0"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="B"
+            android:backgroundTint="#C8E6C9"
+            android:textColor="#2E7D32"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="C"
+            android:backgroundTint="#F8BBD9"
+            android:textColor="#880E4F" />
+    </LinearLayout>
+
+    <!-- ─── Vertical column ─── -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vertical — stacked views"
+        android:textSize="13sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="6dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:backgroundTint="#6C63FF"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

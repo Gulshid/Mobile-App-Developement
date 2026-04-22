@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ConstraintLayout: flat structure, best performance -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FF">
+
+    <!-- ScrollView allows only ONE direct child -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- ─────────────── TextView ─────────────── -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android UI Showcase"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#6C63FF"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All UI components in one screen"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ─────────────── ImageView ─────────────── -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            android:contentDescription="Profile banner"
+            android:background="#6C63FF"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ─────────────── EditText (Name) ─────────────── -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ─────────────── EditText (Email) ─────────────── -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@id/etName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ─────────────── EditText (Password) ─────────────── -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/etEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ─────────────── Buttons Row (LinearLayout) ─────────────── -->
+        <!-- Using LinearLayout inside ConstraintLayout for equal-width buttons -->
+        <LinearLayout
+            android:id="@+id/btnRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/etPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Submit"
+                android:backgroundTint="#6C63FF"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear"
+                android:backgroundTint="#E0E0E0"
+                android:textColor="#333333" />
+        </LinearLayout>
+
+        <!-- ─────────────── Result TextView (hidden initially) ─────────────── -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#2E7D32"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="#E8F5E9"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/btnRow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ─────────────── Section: margin vs padding demo ─────────────── -->
+        <TextView
+            android:id="@+id/tvSectionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Margin vs Padding Demo"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvResult"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Outer box (shows margin effect) -->
+        <TextView
+            android:id="@+id/tvMarginDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This view has margin=16dp (space outside)"
+            android:textSize="12sp"
+            android:textColor="#1565C0"
+            android:background="#BBDEFB"
+            android:padding="12dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSectionLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Inner box (shows padding effect) -->
+        <TextView
+            android:id="@+id/tvPaddingDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This view has padding=24dp (space inside)"
+            android:textSize="12sp"
+            android:textColor="#2E7D32"
+            android:background="#C8E6C9"
+            android:padding="24dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvMarginDemo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ─────────────── Footer TextView ─────────────── -->
+        <TextView
+            android:id="@+id/tvFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lecture 5 — Android UI Development | UET Peshawar"
+            android:textSize="11sp"
+            android:textColor="#AAAAAA"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPaddingDemo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

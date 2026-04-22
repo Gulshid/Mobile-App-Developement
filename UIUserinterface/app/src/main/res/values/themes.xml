@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.UIUserinterface" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#6C63FF</item>
+        <item name="colorPrimaryDark">#5A52E0</item>
+        <item name="colorAccent">#6C63FF</item>
+    </style>
+</resources>

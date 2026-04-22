@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RelativeLayout: positions views relative to parent or siblings -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- ─── Anchored to TOP of parent ─── -->
+    <TextView
+        android:id="@+id/tvRelTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RelativeLayout Example"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#6C63FF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ─── Below the title ─── -->
+    <EditText
+        android:id="@+id/etRelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:layout_below="@id/tvRelTitle"
+        android:layout_marginBottom="10dp" />
+
+    <!-- ─── Below etRelName ─── -->
+    <EditText
+        android:id="@+id/etRelEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/etRelName"
+        android:layout_marginBottom="10dp" />
+
+    <!-- ─── Cancel button: below email, aligned to parent START ─── -->
+    <Button
+        android:id="@+id/btnRelCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:backgroundTint="#E0E0E0"
+        android:textColor="#333333"
+        android:layout_below="@id/etRelEmail"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- ─── Submit button: toRightOf Cancel ─── -->
+    <Button
+        android:id="@+id/btnRelSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:backgroundTint="#6C63FF"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/etRelEmail"
+        android:layout_toEndOf="@id/btnRelCancel"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- ─── Centered in parent ─── -->
+    <ImageView
+        android:id="@+id/imgRelCenter"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="Centered logo"
+        android:layout_centerInParent="true" />
+
+    <!-- ─── Anchored to BOTTOM of parent ─── -->
+    <TextView
+        android:id="@+id/tvRelFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UET Peshawar — Mobile App Dev"
+        android:textSize="11sp"
+        android:textColor="#AAAAAA"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" />
+
+</RelativeLayout>
